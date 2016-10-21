@@ -1,5 +1,5 @@
 $(function(){
-    var loadItems, displayItems, deleteItem, addItem;
+    var loadItems, deleteItem, displayItems, addItem;
 
     loadItems = function(){
         $.ajax({
