@@ -1,0 +1,80 @@
+body {
+}
+
+.create-item{
+    text-align: right;
+}
+
+
+#fridge-items{
+    margin-left: -2px;
+    margin-right: -3px;
+}
+
+.fridge-item-col{
+    padding-left: 2px;
+    padding-right: 3px;
+}
+
+@media (min-width: 750px) and (max-width: 970px) {
+    .fridge-item-col:nth-child(3n+1){
+        clear: left;
+    }
+}
+
+@media (min-width: 970px) and (max-width: 1170px){
+    .fridge-item-col:nth-child(4n+1){
+        clear: left;
+    }
+}
+
+@media (min-width: 1170px) {
+    .fridge-item-col:nth-child(5n+1){
+        clear: left;
+    }
+    #fridge-items > .col-lg-2{
+        width: 20%;
+    }
+}
+
+.fridge-item{
+    border: 1px solid black;
+    margin-bottom: 5px;
+    padding: 10px;
+}
+
+.fridge-item .name{
+    font-size: 20px;
+    text-align: center;
+    border-bottom: 1px solid darkgray;
+    margin-bottom: 5px;
+}
+
+.fridge-item .description{
+    margin-bottom: 5px;
+    max-height: 60px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.fridge-item .bbd{
+    margin-bottom: 5px;
+}
+
+.fridge-item .bbd .fa,
+.fridge-item .owner .fa{
+    margin-right: 5px;
+}
+
+
+.fridge-item .owner{
+    float: right;
+}
+
+.fridge-item .ingredients{
+    margin-bottom: 5px;
+}
+
+.fridge-item .delete{
+    text-align: center;
+}

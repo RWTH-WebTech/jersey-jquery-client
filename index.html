@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Unser Kühlschrank</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script src="./script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <h1 class="col-sm-9">Unser Kühlschrank</h1>
+            <h1 class="col-sm-3 create-item"><button data-toggle="modal" data-target="#createItem-modal" type="button" class="btn btn-success"><i class="fa fa-plus"></i> Item hinzufügen</button></h1>
+        </div>
+        <div id="fridge-items" class="row">
+            <div class="fridge-item">
+                <div class="name"></div>
+                <div class="description"></div>
+                <div class="bbd"></div>
+                <div class="owner"></div>
+                <div class="ingredients"></div>
+            </div>
+        </div>
+        <div id="fridge-empty">Der Kühlschrank ist leer!</div>
+    </div>
+
+    <div class="modal fade" id="createItem-modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <form class="form-horizontal">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title">Item hinzufügen</h4>
+                    </div>
+                    <div class="modal-body">
+                        <!-- Text input-->
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="name">Name</label>
+                            <div class="col-md-7">
+                                <input id="name" name="name" type="text" class="form-control input-md" required="">
+
+                            </div>
+                        </div>
+
+                        <!-- Textarea -->
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="description">Beschreibung</label>
+                            <div class="col-md-7">
+                                <textarea class="form-control" id="description" name="description"></textarea>
+                            </div>
+                        </div>
+
+                        <!-- Text input-->
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="bbd">Haltbarkeit</label>
+                            <div class="col-md-7">
+                                <input id="bbd" name="bbd" type="text" placeholder="dd.mm.jjjj" class="form-control input-md">
+
+                            </div>
+                        </div>
+
+                        <!-- Text input-->
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="owner">Besitzer</label>
+                            <div class="col-md-7">
+                                <input id="owner" name="owner" type="text" class="form-control input-md">
+
+                            </div>
+                        </div>
+
+                        <!-- Textarea -->
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="ingredients">Zutaten</label>
+                            <div class="col-md-7">
+                                <textarea class="form-control" id="ingredients" name="ingredients"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Schließen</button>
+                        <button type="submit" class="btn btn-success">Speichern</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
